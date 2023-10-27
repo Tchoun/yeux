@@ -14,12 +14,13 @@
 function RegarderDevant () {
     PositionServo1 = 75
     PositionServo2 = 88
-    basic.pause(200)
 }
 function RegarderGauche () {
     PositionServo1 = 75
     PositionServo2 = 120
-    basic.pause(200)
+}
+function HautGauche () {
+	
 }
 input.onButtonPressed(Button.A, function () {
     RegarderDroite()
@@ -29,7 +30,6 @@ input.onButtonPressed(Button.A, function () {
 function RegarderDroite () {
     PositionServo1 = 75
     PositionServo2 = 50
-    basic.pause(200)
 }
 function FermerPaupières () {
     PostionServo3 = 65
@@ -42,6 +42,9 @@ function FermerPaupières () {
     Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo6, PostionServo6)
     basic.pause(200)
 }
+function HautDroite () {
+	
+}
 function OuvrirPaupieres () {
     PostionServo3 = 120
     PostionServo4 = 35
@@ -53,6 +56,10 @@ function OuvrirPaupieres () {
     Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo6, PostionServo6)
     basic.pause(200)
 }
+function Haut () {
+    PositionServo1 = 55
+    PositionServo2 = 88
+}
 input.onButtonPressed(Button.B, function () {
     RegarderGauche()
     basic.pause(500)
@@ -62,6 +69,28 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     FermerPaupières()
     OuvrirPaupieres()
 })
+function ClignerOeilGauche () {
+    PostionServo3 = 130
+    PostionServo4 = 35
+    PostionServo5 = 115
+    PostionServo6 = 80
+    Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo3, PostionServo3)
+    Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo4, PostionServo4)
+    Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo5, PostionServo5)
+    Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo6, PostionServo6)
+    basic.pause(200)
+}
+function ClignerOeilDroit () {
+    PostionServo3 = 65
+    PostionServo4 = 110
+    PostionServo5 = 50
+    PostionServo6 = 145
+    Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo3, PostionServo3)
+    Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo4, PostionServo4)
+    Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo5, PostionServo5)
+    Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo6, PostionServo6)
+    basic.pause(200)
+}
 let PostionServo6 = 0
 let PostionServo5 = 0
 let PostionServo4 = 0
